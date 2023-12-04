@@ -6,6 +6,7 @@ def dayOfWeek(year, month, day):
     
     daysSinceEpoch = 365 * yearDistance
     
+    #+1 for 1900 itself
     numOfLeaps = (yearDistance//4) + ((yearDistance+300)//400) - (yearDistance//100) + 1
 
     daysSinceEpoch += numOfLeaps
