@@ -1,18 +1,10 @@
 import math as m
 
-def primeSieve(num):
-    for i in range(2, m.floor(m.sqrt(num))+1):
-        if(num / i == num//i):
-            return False
-    return True
-
 def main():
     lo = 1
     hi = 2000000
     vals = [True for x in range(lo, hi+1)]
     for x in range(lo+1, hi):
-        if(vals[x] == True):
-            vals[x] = primeSieve(x)
         if(vals[x] == True):
             for y in range(2*x, hi, x):
                 vals[y] = False
